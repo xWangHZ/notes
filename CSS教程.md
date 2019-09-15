@@ -4,6 +4,12 @@
 
 ## CSS初步
 
+```css
+/*CSS注释,用在style中*/
+```
+
+
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +121,6 @@ a{
 <h2>字体</h2>
 </body>
 </html>
-
 ```
 
 ```html
@@ -138,5 +143,125 @@ a{
 <h2>字体</h2>
 </body>
 </html>
+```
+
+```html
+<!DOCtype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS选择器</title>
+  <!--根据属性选择元素-->
+  <!--如果要只选择特定网址只需要改成[href = "http://github.com"]-->
+  <style type="text/css">
+    [href]{			
+      font-size: 40px;
+      color: #ff582a;
+    }
+  </style>
+</head>
+<body>
+<p>字体</p>
+<a href = "http://baidu.com">字体</a>
+<a href = "http://github.com">字体</a>
+</body>
+</html>
+```
+
+```html
+<!DOCtype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS选择器</title>
+  <!--冒号选择器-->
+  <!--hover代表鼠标滑过时-->
+  <style type="text/css">
+    a:hover{
+        font-size: 80px;
+        color:red;
+    }
+  </style>
+</head>
+<body>
+<p>字体</p>
+<a href = "http://baidu.com">字体</a>
+<!--<a href = "http://github.com">字体</a>-->
+</body>
+</html>
+```
+
+## 创建边框和背景
+
+```html
+<!--定义简单边框-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建边框和背景</title>
+    <style type = "text/css">
+      .class1{
+          border-width: 20px ;     /*边框宽度*/
+          border-style: solid;    /*边框样式*/
+          border-color: red;       /*边框颜色*/
+          border-top-color: blue;   /*边框上层颜色*/
+      }
+    </style>
+</head>
+<body>
+    <p class="class1" >标题</p>
+</body>
+</html>
+```
+
+```html
+<!--border的简写-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建边框和背景</title>
+    <style type = "text/css">
+      .class1{
+            border: 10px solid red;     /*按照宽度,样式，颜色的顺序*/
+            border-top: 20px dashed blue;   /*同上*/
+      }
+    </style>
+</head>
+<body>
+    <p class="class1" >标题</p>
+</body>
+</html>
+
+```
+
+```html
+<!--背景-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建边框和背景</title>
+    <style type = "text/css">
+      .class1{
+          width:800px;  /*选择器的宽度*/
+          height: 800px;    /*选择器的高度*/
+        /*background-color: greenyellow;  !*背景颜色*!*/
+          background-image:
+              url("https://mewhz.com/usr/uploads/2019/07/695131174.jpg"); 
+          /*设置背景图片,url中放入图片链接*/
+          background-size: cover;   /*设置背景的显示方式*/
+                                    /*cover平铺整个屏幕*/
+          background-attachment: fixed;     /*图片的固定方式*/
+                                            /*fixed随着页面的滚动而滚动*/
+      }
+    </style>
+</head>
+<body>
+    <p class="class1" >文字</p>
+</body>
+</html>
+
 ```
 
