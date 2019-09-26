@@ -265,3 +265,124 @@ a{
 
 ```
 
+## CSS设置w文本样式
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS设置文本样式</title>
+    <style type="text/css">
+        .class1{
+            text-align: center;/*文本对齐方式*/
+            /*center居中;right右对齐;left左对齐(默认)*/
+            direction: ltr;/*文本方向*/
+            /*ltr从左边到右边;rtl从右边到左边*/
+            letter-spacing: 10px;/*字母间距*/
+        }
+        .class2{
+            word-spacing: 200px;/*单词间距*/
+        }
+        .class3{
+            line-height: 100px;/*行高*/
+        }
+        .class4{
+            text-indent: 200px;/*首行缩进*/
+        }
+    </style>
+</head>
+<body>
+    <p class="class1">文字</p>
+    <p class="class2">hello world</p>
+    <p class="class3">hello worldh</p>
+    <p class="class4">缩进测试</p>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS设置文本样式</title>
+    <style type="text/css">
+        .class1{
+            text-decoration: overline;/*文本装饰*/
+            /*underline是下划线;overline是上划线;line-through中间穿过一条线(删除线)*/
+        }
+        .class2{
+            text-transform: capitalize;/*单词首字母大写*/
+            /*uppercase全单词大写;lowercase全单词小写*/
+        }
+    </style>
+</head>
+<body>
+    <p class="class1">我是文本</p>
+    <p class="class2">hello world</p>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS设置文本样式</title>
+    <style type="text/css">
+        .class1{
+            font-family: 楷体;/*设置字体名称*/
+            font-size: 40px;/*设置字体大小*/
+            font-style: italic;/*设置字体样式*/
+            /*italic斜体;*/
+            font-weight: bold;/*粗体*/
+            text-shadow: 10px 10px 1px red;/*设置字体的阴影样式*/
+            /*分别对应着水平偏移，垂直偏移，模糊程度，阴影颜色*/
+        }
+    </style>
+</head>
+<body>
+    <p class="class1">我是文本</p>
+</body>
+</html>
+```
+
+## CSS使用过渡
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建文本过渡</title>
+</head>
+<style type="text/css">
+    p {
+        height: 100px;
+        width: 100px;
+        background-color: lawngreen;
+    }
+    /*p:hover{*/
+    /*    !*直接过渡法*!*/
+    /*    width:200px;*/
+    /*    height: 200px;*/
+    /*    background-color: magenta;*/
+    /*}*/
+    p:hover{
+        width:200px;
+        height: 200px;
+        background-color: magenta;
+        transition-delay: 100ms;/*延迟时间*/
+        transition-duration: 1000ms;/*动画反应时间*/
+        transition-property: background-color;/*这里面放的属性代表该属性慢慢变化,其余直接变化*/
+    }
+</style>
+<body>
+    <p>
+    </p>
+</body>
+</html>
+```
+
