@@ -265,7 +265,7 @@ a{
 
 ```
 
-## CSS设置w文本样式
+## CSS设置文本样式
 
 ```html
 <!DOCTYPE html>
